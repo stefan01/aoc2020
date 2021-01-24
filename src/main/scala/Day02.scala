@@ -1,6 +1,8 @@
+package aoc2020
+
 import scala.io.Source
 
-class Day2 extends Day {
+class Day02 extends Day {
   def day = 2
 
   case class PasswordWithPolicy(min: Int, max: Int, char: Char, password: String)

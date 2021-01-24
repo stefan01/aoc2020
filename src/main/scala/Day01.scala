@@ -1,6 +1,8 @@
+package aoc2020
+
 import scala.io.Source
 
-class Day1 extends Day {
+class Day01 extends Day {
   def day = 1
 
   def readNumbers(): Seq[Int] = {

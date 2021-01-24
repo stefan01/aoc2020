@@ -1,7 +1,6 @@
-trait Day {
-  partOne()
-  partTwo()
+package aoc2020
 
+trait Day {
   def day: Int
 
   def partOne(): Unit

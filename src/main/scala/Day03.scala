@@ -1,6 +1,8 @@
+package aoc2020
+
 import scala.io.Source
 
-class Day3 extends Day {
+class Day03 extends Day {
   def day = 3
 
   sealed class MapTile
@@ -34,6 +36,6 @@ class Day3 extends Day {
   }
 
   override def partTwo(): Unit = {
-
+    result("Not implemented yet")
   }
 }
