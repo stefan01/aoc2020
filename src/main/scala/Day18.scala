@@ -28,10 +28,10 @@ class Day18 extends Day {
     eval(expr.take(idxOpen) + eval(expr.substring(idxOpen+1, idxClose)) + expr.drop(idxClose+1))
   }
 
-  def evalLeftToRight(expr: String): BigDecimal =
-    if(expr.contains('(')) {
-      evalParenthesis(expr, evalLeftToRight)
-    } else {
+  def evalLeftToRight(expr: String): BigDecimal = expr match {
+    case e if e.isEmpty => throw new IllegalArgumentException("Expression cannot be empty")
+    case e if e.contains('(') => evalParenthesis(e, evalLeftToRight)
+    case _ => 
       // Start from the end
       val idxPlus = expr.lastIndexOf('+')
       val idxMul = expr.lastIndexOf('*')
@@ -44,10 +44,10 @@ class Day18 extends Day {
         BigDecimal(expr.toDouble)
     }
 
-  def evalAddBeforeMul(expr: String): BigDecimal =
-    if(expr.contains('(')) {
-      evalParenthesis(expr, evalAddBeforeMul)
-    } else {
+  def evalAddBeforeMul(expr: String): BigDecimal = expr match {
+    case e if e.isEmpty => throw new IllegalArgumentException("Expression cannot be empty")
+    case e if e.contains('(') => evalParenthesis(e, evalAddBeforeMul)
+    case _ => 
       val idxPlus = expr.indexOf('+')
       val idxMul = expr.indexOf('*')
 
