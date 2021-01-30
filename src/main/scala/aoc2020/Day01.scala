@@ -21,7 +21,7 @@ class Day01 extends Day {
     // adding up to 2020
     val results: Seq[Int] = for(
       x <- numbers;
-      y <- numbers;
+      y <- numbers
       if x + y == 2020
     ) yield x * y
 
@@ -37,7 +37,7 @@ class Day01 extends Day {
     val results: Seq[Int] = for(
       x <- numbers;
       y <- numbers;
-      z <- numbers;
+      z <- numbers
       if x + y + z == 2020
     ) yield x * y * z
 
