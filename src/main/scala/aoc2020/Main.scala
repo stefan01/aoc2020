@@ -1,3 +1,5 @@
+package aoc2020
+
 object Main extends App {
   val d01 = new aoc2020.Day01()
   d01.partOne()
